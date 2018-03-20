@@ -1,0 +1,86 @@
+# Use \n for new lines
+DEATHBAN_DENY: "&7You are deathbanned for another &3%hours% hours&7, &3%minutes% minutes &7and &3%seconds% seconds!"
+DEATHBAN_DENY_LIVES: "&7You are deathbanned for another &3%hours% hours&7, &3%minutes% minutes &7and &3%seconds% seconds!&7You have &3%lives% &7lives, Rejoin to use one"
+
+DEATHBAN_KICKED: "&7You have been deathbanned!"
+
+HELP:
+    - "&8&m-----------------------------------------"
+    - "&3&lHelp:"
+    - "  &7/&3report &7<&3player&7> &7Report a player for cheating"
+    - "  &7/&3request &7<&3message&7> &7Request staff help"
+    - "  &7/&3faction &7Factions main command"
+    - ""
+    - "&7If you need more help, please do &3/request&7!"
+    - "&8&m-----------------------------------------"
+
+LIVES:
+  HELP:
+    - "&8&m-----------------------------------------"
+    - "&3&lLives:"
+    - "  &7/&3lives check &7[&3player&7] &7Get your amount of lives"
+    - "  &7/&3lives send &7<&3player&7> <&3amount&7> &7Send someone lives"
+    - "  &7/&3lives revive &7<&3player&7> &7Revive a player"
+    - "&8&m-----------------------------------------"
+
+  SUBCOMMAND:
+    CHECK: "&7You have &3%lives% &7lives."
+    CHECK_OTHER: "&3%player% &7has &3%lives% &7lives."
+
+    SEND_SUCCESSFUL: "&7You have sent &3%lives% &7lives to &3%player%&7!"
+    SEND_CORRECT_USAGE: "&7Correct usage: &3/lives send &7<&3player&7> <&3amount&7>"
+    SEND_RECEIVED: "&7You have received &3%lives% &7lives from &3%player%&7!"
+
+    REVIVE_REVIVED: "&7You have revived &3%player%&7!"
+    REVIVE_NOT_DEATHBANNED: "&3%player% &7is not deathbanned!"
+
+    #
+    # ADMIN
+    #
+
+    SET_SUCCESSFUL: "&7You have set &3%player%'s &7lives to &3%amount%"
+    SET_CORRECT_USAGE: "&7Correct usage: &3/lives set &7<&3player&7> <&3amount&7>"
+    SET_RECEIVED: "&7Your lives have been set to &3%lives%&7!"
+
+    ADD_SUCCESSFUL: "&7You have added &3%lives% lives to &3%player%'s &7lives!"
+    ADD_CORRECT_USAGE: "&7Correct usage: &3/lives add &7<&3player&7> <&3amount&7>"
+    ADD_RECEIVED: "&7You have received &3%lives% &7lives!"
+
+    REMOVE_SUCCESSFUL: "&7You have removed &3%lives% lives from &3%player%'s &7lives!"
+    REMOVED_CORRECT_USAGE: "&7Correct usage: &3/lives remove &7<&3player&7> <&3amount&7>"
+    REMOVED_RECEIVED: "&7You have been taken &3%lives% &7lives!"
+
+    NOT_ENOUGH: "&7You do not have enough lives!"
+    NOT_A_NUMBER: "&3%arg% &7is not a number!"
+
+    UNKNOWN_SUBCOMMAND: "&7Unknown sub-command &3%arg%&7!"
+
+DEATHBAN:
+  HELP:
+    - "&8&m-----------------------------------------"
+    - "&3&lDeathban:"
+    - "  &7/&3deathban revive &7[&3player&7] &7Revive a player"
+    - "  &7/&3deathban rollback &7<&3player&7> &7Rollback inventory of a player"
+    - "&8&m-----------------------------------------"
+  SUBCOMMAND:
+    REVIVE_REVIVED: "&7You have revived &3%player%&7!"
+    REVIVE_NOT_DEATHBANNED: "&3%player% &7is not deathbanned!"
+    REVIVE_CORRECT_USAGE: "&7Correct usage: &3/deathban revive &7<&3player&7>"
+
+    ROLLBACK_SUCCESSFUL: "&7You have rollbacked &3%player%'s &7inventory!"
+    ROLLBACK_SUCCESSFUL_TARGET: "&7Your inventory has been rollbacked by &3%player%&7!"
+    ROLLBACK_NO_INVENTORY: "&3%player% &7has no inventory to rollback!"
+
+PANIC:
+  ENABLED: "&7You have enabled your &3Panic Mode&7. The staff has been notified!"
+  DISABLED: "&7You have disabed your panic mode."
+
+  NOTIFICATION_ENABLED:
+    - "&8&m-----------------------------------------"
+    - "&8(&3ALERT&8) &3%player% &7has enabled their panic mode!"
+    - "&7Teleport to them &3NOW&7!"
+    - "&8&m-----------------------------------------"
+  NOTIFICATION_DISABLED:
+    - "&8&m-----------------------------------------"
+    - " &3%player% &7has disabled their panic mode!"
+    - "&8&m-----------------------------------------"

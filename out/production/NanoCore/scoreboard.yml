@@ -1,0 +1,12 @@
+TITLE: "&3&lNanoHCF &7(Map 1)"
+
+ENTRIES:
+  COMBAT: "&c&lCombat Tag: &7"
+  ENDER_PEARL: "&d&lEnderpearl: &7"
+  PVP_TIMER: "&a&lPvP Timer: &7"
+
+  CLASS:
+    WARMUP: "&a&lClass Warmup: &7"
+
+
+LINE_COLOR: "&7"

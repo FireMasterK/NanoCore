@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="worldguard-6.0.0-beta-03">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/worldguard-6.0.0-beta-03.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

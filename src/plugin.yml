@@ -1,0 +1,38 @@
+main: me.idarkyy.nanocore.NanoCore
+
+name: NanoCore
+author: [iDarkyy]
+version: 1.0
+
+depend: []
+softdepend: []
+
+commands:
+  core:
+    aliases: [nanocore]
+    description: NanoCore main command
+  deathban:
+    aliases: [db]
+    description: Deathban Manager command
+  message:
+    aliases: [msg, m, pm, privatemessage, w, whisper, tell, t]
+    description: Private message another player
+  reply:
+    aliases: [r]
+    description: Reply to the last messaged player
+  lives:
+    aliases: [live]
+    description: Lives command
+  sounds:
+    description: Toggle your sounds
+  panic:
+    description: Toggle panic mode
+  staffchat:
+    aliases: [sc, staffc, schat, adminchat]
+    description: Toggle or send messages to the staff chat
+
+
+
+  suicide:
+    aliases: [kms]
+    description: Lived enough? Kill yourself now

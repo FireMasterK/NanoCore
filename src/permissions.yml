@@ -1,0 +1,16 @@
+COMMANDS:
+  CORE: "nanocore.command.core"
+  DEATHBAN: "nanocore.command.deathban"
+  PANIC: "nanocore.command.panic"
+  STAFFCHAT: "nanocore.command.staffchat"
+
+DEATHBAN:
+  BYPASS: "nanocore.deathban.bypass"
+
+STAFF_PERMISSION: "nanocore.staff"
+
+LIVES_ADD: "nanocore.lives.add"
+LIVES_REMOVE: "nanocore.lives.remove"
+LIVES_SET: "nanocore.lives.set"
+
+PANIC_NOTIFICATION: "nanocore.panic.notification"

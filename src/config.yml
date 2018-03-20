@@ -1,0 +1,93 @@
+#=========================================================#
+#                  NanoCore Configuration                 #
+#=========================================================#
+
+# none yet :p
+
+#=========================================================#
+#                  Deathban Configuration                 #
+#=========================================================#
+
+# Deathban time (IN MINUTES)
+deathban-time: 1
+
+#=========================================================#
+#                        Database                         #
+#=========================================================#
+
+database:
+  # Available: FLATFILE
+  type: FLATFILE
+  info:
+    # TODO
+
+#=========================================================#
+#                         Staff Mode                      #
+#=========================================================#
+
+# Staff Mode Items
+
+# Set to AIR to disable
+STAFF_ITEMS:
+  0:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  1:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  2:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  3:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  4:
+    SLOT: 0
+    TYPE: ICE
+    NAME: "&3&lFreeze"
+    LORE:
+      - "&3Right click &7on a player to freeze him"
+  5:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  6:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  7:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"
+  8:
+    SLOT: 0
+    TYPE: COMPASS
+    NAME: "&3&lTeleporter"
+    LORE:
+      - "&3Left click &7to teleport to the target block"
+      - "&3Right click &7to teleport through a block"

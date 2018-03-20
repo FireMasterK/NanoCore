@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NanoCore:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NanoCore_jar</output-path>
+    <root id="archive" name="NanoCore.jar">
+      <element id="module-output" name="NanoCore" />
+    </root>
+  </artifact>
+</component>

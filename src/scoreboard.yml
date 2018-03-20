@@ -1,0 +1,32 @@
+# In ticks | 20 ticks = 1 second
+REFRESH_RATE: 2
+
+TITLE: "&3&lNanoHCF &7(Map 1)"
+
+ENTRIES:
+  COMBAT: "&c&lCombat Tag: &7"
+  ENDER_PEARL: "&d&lEnderpearl: &7"
+  PVP_TIMER: "&a&lPvP Timer: &7"
+
+  CLASS:
+    WARMUP: "&a&lClass Warmup: &7"
+
+  STAFF:
+    STAFF: "&3&lStaff:"
+    VANISHED: " &7* &3Vanished: "
+    CHAT_STATE: " &7* &3Chat: "
+    ONLINE: " &7* &3Online: "
+
+COLORS:
+  VANISHED:
+    FALSE: "&cdisabled"
+    TRUE: "&aenabled"
+  CHAT_STATE:
+    GLOBAL: "&bGlobal"
+    STAFF: "&bStaff"
+  ONLINE:
+    COLOR: "&b"
+
+
+
+LINE: "&7&m--------------------------------"

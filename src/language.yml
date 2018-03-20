@@ -1,0 +1,16 @@
+NO_PERMISSION: "&cYou do not have permission"
+NOT_ONLINE: "&3%player% &7is offline!"
+
+STAFF_JOIN_MESSAGE: "&8(&a+&8) &7%player%"
+STAFF_QUIT_MESSAGE: "&8(&c-&8) &7%player%"
+
+PRIVATE_MESSAGE_CORRECT_USAGE: "&7Correct usage: &3/%command% <player> <message>"
+PRIVATE_MESSAGE_REPLY_CORRECT_USAGE: "&7Correct usage: &3/reply <message>"
+
+PRIVATE_MESSAGE_REPLY_DID_NOT_MESSAGE: "&7You did not message anyone recently."
+
+PRIVATE_MESSAGE_TO: "&7(To &3%player%&7) %message%"
+PRIVATE_MESSAGE_FROM: "&7(From &3%player%&7) %message%"
+
+SOUNDS_ENABLED: "&7You have &aenabled &7sounds!"
+SOUNDS_DISABLED: "&7You have &cdisabled &7sounds!"

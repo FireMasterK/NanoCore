@@ -1,0 +1,208 @@
+
+    PermissionEx is no longer depending for the HCFactions to work properly.
+        Vault has taken it's place means that you can use every permission plugin.
+    Auto-Scheduler or Auto-Run for events have been due to high demands.
+        Check config how to set it up.
+    Along with Auto-Scheduler, I've  also In-Game command for it which is /event schedule.
+        Usage: /event schedule <list|next|shuffle|rotate|start|reload>
+     new event called "Palace", basically it's same as KOTH just that the time is longer and configurable (by default 25mins).
+        Please test this event and report if you find any bugs.
+     new event called "Ender Dragon".
+        Startable only in the END environment.
+        Please test this event and report if you find any bugs.
+    AutoSave is now editable in the config where you can enable/disable it and set the save time interval.
+    Deathbans for the KitMap mode are now automaticly disabled so there is no need to add "hcf.deathban.bypass" in the KitMap server.
+    For those who use kSpigot - ExoSpigot as dependency for the server, I've  now 2 jars in the download folder.
+    (If you are using normal spigot as dependency just ignore this)
+     fix for pearling outside of border.
+     automatic clear for Throwable Cobwebs in safezones.
+     support for new Spigot - ExoSpigot | kSpigot
+     new event(FURY) that was seen on ClarityMC.
+     Fury messages in config.
+     Fury captures to the faction show.
+     Fury scoreboard lines in config.
+     new section for events where you can configure everything to your liking.
+     HWID, every buyer has to PM to get their HWID.
+     StatTrak update on scoreboard when you are holding weapon.
+     ChatColor stripping thru the Kit Signs
+     KitMapGUI that animates glass
+     Classes configurable equipment in config
+     Throwable Cobwebs with scoreboard cooldown and configuration in config
+     new Ghost Class
+     the faction commands such as /f setlives | /f lives | /f revive
+     fully configurable scoreboard lines in config
+     cool Game Events Sign Informations
+     back and fixed the Pickaxe statistics
+     Koth topcaptures Command (/koth topcaptures <type>)
+     Koth,Conquest and Citadel storing in Team Show
+     and fixed Glowstone Mountain message upon breaking
+     Citadel Loot
+     Citadel Event
+     SignEvent on capturing events
+     and fixed Command (/togglefd)
+     Back Command (/back)
+     More Items Command (/more)
+     Speed Command (/speed)
+     Event fixes with Ender Pearls (First core that has fixed this)
+     and fixed messaged for Knock time (configurable)
+     Fully configurable Deathban system (create as much as you want Deathban ranks)
+     HideStaff Command (/hidestaff)
+     Tab changeable settings (/tabsettings || /options)
+     Configurable crates (/key)
+     TeamSendCoordinates Command (/tc || /tl)
+     KillStreaks to Scoreboard
+     EOTWRevive Command (/eotwrevive)
+     Border (/setborder)
+     SkyGear (/skygear)
+     Custom Pickaxes (Beta phase)
+     Panic mode (/panic)
+     Chest manager (/chest)
+     Kit manager (/kit)
+     GKits (/gkitz, custom plugin)
+
+     -----------------------------------------
+
+    Scoreboard
+        Combat Tag
+        Enderpearl Cooldown
+        PVP Timer
+        KOTH Support
+        Conquest Support
+        Destroy the Core Support
+        KitMap Mode:
+            Statistic Support (Kills,Deaths,Balance,KillStreaks)
+        F Home Timer
+        F Stuck Timer
+        Logout Timer
+        Staff Mode
+        Classes
+            Archer (with Archer Tag)
+            Miner (with Diamonds,Invisible,Cobble)
+            Bard
+            Ghost (with cooldown and mode)
+            Rogue
+    Custom Events
+        Conquest
+        King of the Hill (KOTH)
+        Glowstone Mountain
+        Destroy the Core (DTC)
+        Custom Crates
+    Basic Features
+        PVP Timer
+        Subclaim
+        Configurable Reclaim settings
+        Enchant Limiter
+        Potion Limiter
+        Craft Limiter
+        Death Sign
+        Death Ban w/ Lives
+        Found Diamond
+        Horse Protect
+        Report GUI
+        Request (Helpop)
+        Moderator Mode (Mod Mode)
+        Custom Vanish
+        Crowbar
+        Custom Crates (with broadcasting loot)
+        Death Messages
+        Instant Smelt (with a permission)
+        Anti Nether portal trap
+        End Exit / Spawn
+        Stats GUI
+        Kit Map GUI
+        Plugin Protector/Hider
+        Inventory restorer
+        Chat commands (/chat clear, /chat toggle and a slow chat)
+        Crowbar Sign Shop
+        EOTW & SOTW commands and features
+        Food nerf, Looting XP Boost
+        Item Tracker
+        Head Drop
+        Staff chat
+        Gapple Cooldown
+        Combat Loggers
+        WorldEdit [Support]
+    Custom Listeners
+        Throwable CobWeb (Throw the CobWeb)
+        Book Re-Enchant (Remove book's enchant)
+        Stattrak (Show your stattrak on sword)
+        Pickaxe Stats (Show the amount of ores you mined on Pickaxe)
+        Minecart Elevator (Use Minecraft to travel)
+        Sign Elevator
+        KitMap Switcher (Use config to switch from HCF to KitMap)
+        BedBombing (Use bed to destroy your enemy)
+        AnvilSpamming (Alert staff if someone is anvil spamming)
+        AutoMute (If player is spamming he will get automuted)
+        Custom Whitelist Message (Change whitelist message)
+    Other Commands
+        Broadcast
+        DisableChat
+        Enchant
+        Feed
+        Fly
+        Freeze
+        Gamemode
+        Giveaway
+        Give
+        God
+        Hat
+        Heal
+        Ignore
+        Invsee
+        Kill
+        Lag
+        List
+        Message (/msg)
+        MessageSpy
+        NewVideo (Youtube Perk)
+        Recording (Youtube Perk)
+        RemovePerm (Remove perms and deop player)
+        Rename (Donator Perk)
+        Reply (/r)
+        Server Time
+        Settings (Opens GUI with settings)
+        Spawn
+        Spawner
+        Stats
+        Teleport
+        ToggleChat
+        ToggleMessages
+        ToggleSounds
+        Top
+        Uptime
+        Vanish
+        World (Switch worlds)
+    Game Commands
+        Cobble
+        Crowbar
+        Economy
+        EndPortal
+        Focus
+        Information
+        LFF Looking for Faction
+        Location
+        Logout
+        Map Kit
+        MobDrops
+        Pay
+        Playtime
+        PvPTimer
+        Regen DTR
+        Set END/SPAWN EXIT
+        SpawnCannon
+        StaffMode
+        StaffRevive
+        ToggleCapzone
+        ToggleSidebar ToggleScoreboard
+        ToggleLightings
+        ToggleDiamondAlerts
+        Coordinates
+        Help
+        Famous
+        Youtube
+        Store
+        Website
+        Teamspeak
+        Platinum revive
+        Gold revive
+        Warp
