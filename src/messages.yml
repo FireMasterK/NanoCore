@@ -1,6 +1,6 @@
 # Use \n for new lines
 DEATHBAN_DENY: "&7You are deathbanned for another &3%hours% hours&7, &3%minutes% minutes &7and &3%seconds% seconds!"
-DEATHBAN_DENY_LIVES: "&7You are deathbanned for another &3%hours% hours&7, &3%minutes% minutes &7and &3%seconds% seconds!&7You have &3%lives% &7lives, Rejoin to use one"
+DEATHBAN_DENY_LIVES: "&7You are deathbanned for another &3%hours% hours&7, &3%minutes% minutes &7and &3%seconds% seconds!&7You have &3%lives% &7lives, Rejoin in 5 seconds to use one"
 
 DEATHBAN_KICKED: "&7You have been deathbanned!"
 

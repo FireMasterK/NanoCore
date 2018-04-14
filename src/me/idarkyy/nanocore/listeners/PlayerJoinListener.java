@@ -4,6 +4,7 @@ import me.idarkyy.nanocore.constructors.ActionPlayer;
 import me.idarkyy.nanocore.managers.ConfigurationManager;
 import me.idarkyy.nanocore.managers.CoreManager;
 import me.idarkyy.nanocore.managers.DataManager;
+import me.idarkyy.nanocore.managers.PrivateMessageManager;
 import me.idarkyy.nanocore.utils.Sidebar;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -22,6 +23,8 @@ public class PlayerJoinListener implements Listener {
 
         CoreManager.getManager().setPanicMode(player, false);
 
+        PrivateMessageManager.getManager().setSounds(player, true);
+
         data.setKey(player, "UUID", player.getUniqueId().toString());
 
         if (player.hasPermission(config.getPermissions().getString("STAFF", "nanocore.staff")) || player.isOp()) {
@@ -29,7 +32,7 @@ public class PlayerJoinListener implements Listener {
                     config.getPermissions().getString("STAFF", "nanocore.staff"));
         }
 
-        Sidebar sidebar = Sidebar.createScore(player);
-        sidebar.setTitle(config.getScoreboard().getString("TITLE"));
+        Sidebar.createScore(player);
+        Sidebar.getByPlayer(player).setTitle(config.getScoreboard().getString("TITLE"));
     }
 }

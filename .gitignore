@@ -25,3 +25,6 @@ target/
 *.tar.gz
 *.rar
 *.class
+
+# Other #
+libs/

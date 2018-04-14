@@ -34,8 +34,8 @@ public class Sidebar {
         return players.containsKey(player.getUniqueId());
     }
 
-    public static Sidebar createScore(Player player) {
-        return new Sidebar(player);
+    public static void createScore(Player player) {
+        players.put(player.getUniqueId(), new Sidebar(player));
     }
 
     public static Sidebar getByPlayer(Player player) {
@@ -53,6 +53,8 @@ public class Sidebar {
 
     public void setSlot(int slot, String text) {
         Team team = scoreboard.getTeam("SLOT_" + slot);
+        if(team == null)
+        	team = scoreboard.registerNewTeam("SLOT_" + slot);
         String entry = genEntry(slot);
         if (!scoreboard.getEntries().contains(entry)) {
             sidebar.getScore(entry).setScore(slot);

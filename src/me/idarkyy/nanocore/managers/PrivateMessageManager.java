@@ -51,7 +51,7 @@ public class PrivateMessageManager {
     }
 
     public boolean getSounds(Player player) {
-        return sounds.get(player);
+        return sounds.containsKey(player) ? sounds.get(player) : true;
     }
 
     public boolean getPmState(Player player) {

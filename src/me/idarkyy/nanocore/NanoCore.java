@@ -30,6 +30,7 @@ public class NanoCore extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        
         DeathbanManager.setManager(new DeathbanManager());
         ConfigurationManager.setManager(new ConfigurationManager());
         DataManager.setManager(new DataManager());
@@ -38,19 +39,10 @@ public class NanoCore extends JavaPlugin {
         ScoreboardManager.setManager(new ScoreboardManager());
         FactionsManager.setInstance(new FactionsManager());
         CooldownManager.setManager(new CooldownManager());
+        ClassManager.setManager(new ClassManager());
 
         ConfigurationManager.getManager().initialize();
         DataManager.getManager().initialize();
-
-        registerCommand("core", new CoreCommand());
-        registerCommand("deathban", new DeathbanCommand());
-        registerCommand("message", new MessageCommand());
-        registerCommand("reply", new ReplyCommand());
-        registerCommand("suicide", new SuicideCommand());
-        registerCommand("lives", new LivesCommand());
-        registerCommand("sounds", new SoundsCommand());
-        registerCommand("panic", new PanicCommand());
-        registerCommand("staffchat", new StaffChatCommand());
 
         registerListener(new PlayerJoinListener());
         registerListener(new PlayerQuitListener());
@@ -63,6 +55,17 @@ public class NanoCore extends JavaPlugin {
         registerListener(new StaffModeListener());
         registerListener(new PlayerPickupItemListener());
         registerListener(new PlayerMoveByBlockListener());
+//        registerListener(new ClassListener());
+        
+        registerCommand("core", new CoreCommand());
+        registerCommand("deathban", new DeathbanCommand());
+        registerCommand("message", new MessageCommand());
+        registerCommand("reply", new ReplyCommand());
+        registerCommand("suicide", new SuicideCommand());
+        registerCommand("lives", new LivesCommand());
+        registerCommand("sounds", new SoundsCommand());
+        registerCommand("panic", new PanicCommand());
+        registerCommand("staffchat", new StaffChatCommand());
 
         String currentPlugin = "NONE";
 
@@ -87,14 +90,20 @@ public class NanoCore extends JavaPlugin {
                 " &7Version " + getDescription().getVersion(),
                 "&8&m-------------------------------"
         );
-        if (!updater.getLatestVersion().equals(getDescription().getVersion())) {
-            console.sendMessage(
-                    "&7New version of &3NanoCore &7is available!",
-                    "&7Current version: " + getDescription().getVersion(),
-                    "&7Latest version: " + updater.getLatestVersion(),
-                    "&8&m-------------------------------"
-            );
-        }
+        
+        new BukkitRunnable() {
+			@Override
+			public void run() {
+				if (!updater.getLatestVersion().equals(getDescription().getVersion())) {
+		            console.sendMessage(
+		                    "&7New version of &3NanoCore &7is available!",
+		                    "&7Current version: " + getDescription().getVersion(),
+		                    "&7Latest version: " + updater.getLatestVersion(),
+		                    "&8&m-------------------------------"
+		            );
+		        }
+			}
+		}.runTaskAsynchronously(this);
 
         new BukkitRunnable() {
             @Override
@@ -103,7 +112,7 @@ public class NanoCore extends JavaPlugin {
                     ScoreboardManager.getManager().update(player);
                 }
             }
-        }.runTaskTimer(this,
+        }.runTaskTimerAsynchronously(this,
                 0L,
                 /* Refresh Rate */ ConfigurationManager.getManager().getScoreboard().getLong("REFRESH_RATE"));
     }

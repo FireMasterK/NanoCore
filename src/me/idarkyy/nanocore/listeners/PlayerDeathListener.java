@@ -13,8 +13,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
-import java.time.ZonedDateTime;
-
 public class PlayerDeathListener implements Listener {
     ConfigurationManager config = ConfigurationManager.getManager();
     DataManager data = DataManager.getManager();
@@ -42,13 +40,7 @@ public class PlayerDeathListener implements Listener {
 
         if (!player.hasPermission(config.getPermissions().getString("DEATHBAN.BYPASS")) && !player.isOp()) {
             data.setKey(player, "deathban.state", true);
-            ZonedDateTime until = ZonedDateTime.now().plusMinutes(config.getConfig().getLong("deathban-time"));
-            data.setKey(player, "deathban.year", until.getYear());
-            data.setKey(player, "deathban.month", until.getMonthValue());
-            data.setKey(player, "deathban.day", until.getDayOfMonth());
-            data.setKey(player, "deathban.hour", until.getHour());
-            data.setKey(player, "deathban.minute", until.getMinute());
-            data.setKey(player, "deathban.second", until.getSecond());
+            data.setKey(player, "deathban.time", System.currentTimeMillis() + (config.getConfig().getLong("deathban-time") * 60 * 1000));
 
             player.kickPlayer(
                     ChatColor.translateAlternateColorCodes('&', ConfigurationManager.getManager().getMessages().getString("DEATHBAN_KICKED"))

@@ -5,7 +5,7 @@ author: [iDarkyy]
 version: 1.0
 
 depend: []
-softdepend: []
+softdepend: [Mango]
 
 commands:
   core:

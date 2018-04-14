@@ -6,6 +6,16 @@ import org.bukkit.inventory.ItemStack;
 
 public class ClassManager {
 
+	private static ClassManager manager;
+
+	public static ClassManager getManager() {
+        return manager;
+    }
+
+    public static void setManager(ClassManager manager) {
+        ClassManager.manager = manager;
+    }
+
     public ClassType getClass(Player player) {
         ItemStack helmet = player.getInventory().getHelmet();
         ItemStack chestplate = player.getInventory().getChestplate();

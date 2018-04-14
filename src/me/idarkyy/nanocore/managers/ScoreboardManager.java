@@ -1,9 +1,10 @@
 package me.idarkyy.nanocore.managers;
 
+import me.idarkyy.nanocore.NanoCore;
 import me.idarkyy.nanocore.utils.Sidebar;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 
@@ -33,15 +34,25 @@ public class ScoreboardManager {
                 entries.add(config.getScoreboard().getString("ENTRIES.STAFF.STAFF"));
                 entries.add(config.getScoreboard().getString("ENTRIES.STAFF.VANISHED"));
                 entries.add(config.getScoreboard().getString("ENTRIES.STAFF.CHAT_STATE"));
-                entries.add(config.getScoreboard().getString("ENTRIES.STAFF.ONLINE") + getOnline());
-                if(entries.get(entries.size()).equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', line)));
+                entries.add(config.getScoreboard().getString("ENTRIES.STAFF.ONLINE") + config.getScoreboard().getString("COLORS.ONLINE.COLOR") + getOnline());
             }
-
+            
+            for (int i = 0; i < entries.size(); i++) {
+				scoreboard.setSlot(i, entries.get(i));
+			}
+        } else { // Server Has been reloaded
+        	new BukkitRunnable() {
+				@Override
+				public void run() {
+					Sidebar.createScore(player);
+					Sidebar.getByPlayer(player).setTitle(config.getScoreboard().getString("TITLE"));
+				}
+			}.runTask(NanoCore.getInstance());
         }
     }
 
-    private String getOnline() {
-        return config.getScoreboard().getString("COLORS.ONLINE.COLOR") + String.valueOf(Bukkit.getServer().getOnlinePlayers().size());
+    private int getOnline() {
+        return Bukkit.getServer().getOnlinePlayers().length;
     }
 
     private String vanishState(Player player) {

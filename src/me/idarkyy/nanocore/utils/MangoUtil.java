@@ -24,7 +24,7 @@ public class MangoUtil {
             BlockFace.NORTH_WEST
     };
     public static MangoUtil util;
-    private static Map<UUID, String> cachedPlayers = new HashMap();
+    private static Map<UUID, String> cachedPlayers = new HashMap<UUID, String>();
 
     public static void log(String... s) {
         for (String string : s) {
@@ -69,7 +69,7 @@ public class MangoUtil {
         Iterator<Faction> it = Mango.getInstance().getFactionManager().getFactions().iterator();
 
         while (it.hasNext()) {
-            Faction f = (Faction) it.next();
+            Faction f = it.next();
 
             if ((f instanceof PlayerFaction)) {
                 PlayerFaction faction = (PlayerFaction) f;
@@ -117,17 +117,17 @@ public class MangoUtil {
 
     public static String getFactionMember(Player player, int i) {
         if (hasFaction(player)) {
-            List<UUID> members = new ArrayList(Mango.getInstance().getFactionManager().getFaction(player).getMembers());
+            List<UUID> members = new ArrayList<UUID>(Mango.getInstance().getFactionManager().getFaction(player).getMembers());
             members.addAll(Mango.getInstance().getFactionManager().getFaction(player).getOfficers());
 
             if (i > members.size() - 1) {
                 return "";
             }
-            UUID uuid = (UUID) members.get(i);
+            UUID uuid = members.get(i);
             if (!cachedPlayers.containsKey(uuid)) {
                 cachedPlayers.put(uuid, Bukkit.getOfflinePlayer(uuid).getName());
             }
-            String name = (String) cachedPlayers.get(uuid);
+            String name = cachedPlayers.get(uuid);
             return name;
         }
         if (i == 0) {
@@ -143,7 +143,7 @@ public class MangoUtil {
                 if (!cachedPlayers.containsKey(uuid)) {
                     cachedPlayers.put(uuid, Bukkit.getOfflinePlayer(uuid).getName());
                 }
-                return (String) cachedPlayers.get(uuid);
+                return cachedPlayers.get(uuid);
             } catch (IndexOutOfBoundsException e) {
                 return "";
             }
@@ -153,7 +153,7 @@ public class MangoUtil {
 
     public static String getFactionAlly(Player player) {
         if (hasFaction(player)) {
-            Iterator localIterator = Mango.getInstance().getFactionManager().getFaction(player).getAllies().iterator();
+            Iterator<PlayerFaction> localIterator = Mango.getInstance().getFactionManager().getFaction(player).getAllies().iterator();
             if (localIterator.hasNext()) {
                 PlayerFaction ally = (PlayerFaction) localIterator.next();
                 return ally.getName();

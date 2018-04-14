@@ -1,12 +1,8 @@
 package me.idarkyy.nanocore.constructors;
 
-import com.sk89q.worldedit.bukkit.WorldEditPlugin;
-import com.sk89q.worldedit.regions.Region;
-import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import me.idarkyy.nanocore.managers.ConfigurationManager;
 import me.idarkyy.nanocore.managers.DataManager;
 import me.idarkyy.nanocore.managers.DeathbanManager;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
