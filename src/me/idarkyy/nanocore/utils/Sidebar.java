@@ -73,7 +73,7 @@ public class Sidebar {
             scoreboard.resetScores(entry);
         }
     }
-
+    
     public void setSlotsFromList(List<String> list) {
         while (list.size() > 15) {
             list.remove(list.size() - 1);

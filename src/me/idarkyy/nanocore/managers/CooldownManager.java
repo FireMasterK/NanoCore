@@ -15,40 +15,41 @@ public class CooldownManager {
         CooldownManager.manager = manager;
     }
 
-    private HashMap<UUID, Double> pearlCooldown = new HashMap<>();
+    private HashMap<UUID, Long> pearlCooldown = new HashMap<>();
 
-    public Boolean hasCooldown(Player player, CooldownType type) {
-        if (type.equals(CooldownType.ENDERPEARL)) {
+    public boolean hasCooldown(Player player, CooldownType type) {
+        if (type == CooldownType.ENDERPEARL) {
             boolean contain = pearlCooldown.containsKey(player.getUniqueId());
             if (contain) {
 
-                double date = pearlCooldown.get(player.getUniqueId());
-                double now = System.currentTimeMillis();
+                long start = pearlCooldown.get(player.getUniqueId());
+                long now = System.currentTimeMillis();
 
-                double dif = now - date;
+                long dif = now - start;
 
                 return dif < 16000D;
+                
             }
             return false;
         }
 
-        return null;
+        return false;
     }
 
     public String getCooldown(Player player, CooldownType type) {
-        if(type.equals(CooldownType.ENDERPEARL)) {
+        if(type == CooldownType.ENDERPEARL) {
             DecimalFormat df = new DecimalFormat("#.#");
-            double date = pearlCooldown.get(player.getUniqueId());
-            double now = System.currentTimeMillis();
-            double dif = now - date;
-            double time = (16000D - dif) / 1000;
+            long start = pearlCooldown.get(player.getUniqueId());
+            long now = System.currentTimeMillis();
+            long dif = now - start;
+            long time = (16000 - dif) / 1000;
             return df.format(time);
         }
 
         return null;
     }
 
-    public void putCooldown(Player player, CooldownType type, double currentTimeMilis) {
+    public void putCooldown(Player player, CooldownType type, long currentTimeMilis) {
         if(type.equals(CooldownType.ENDERPEARL)) {
             pearlCooldown.put(player.getUniqueId(), currentTimeMilis);
         }

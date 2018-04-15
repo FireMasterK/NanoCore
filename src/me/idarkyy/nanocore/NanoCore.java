@@ -53,6 +53,7 @@ public class NanoCore extends JavaPlugin {
         registerListener(new PlayerMoveListener());
         registerListener(new PlayerChatListener());
         registerListener(new StaffModeListener());
+        registerListener(new PlayerInteractListener());
         registerListener(new PlayerPickupItemListener());
         registerListener(new PlayerMoveByBlockListener());
 //        registerListener(new ClassListener());

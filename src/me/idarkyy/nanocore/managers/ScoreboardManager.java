@@ -1,6 +1,7 @@
 package me.idarkyy.nanocore.managers;
 
 import me.idarkyy.nanocore.NanoCore;
+import me.idarkyy.nanocore.managers.CooldownManager.CooldownType;
 import me.idarkyy.nanocore.utils.Sidebar;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -35,11 +36,15 @@ public class ScoreboardManager {
                 entries.add(config.getScoreboard().getString("ENTRIES.STAFF.VANISHED"));
                 entries.add(config.getScoreboard().getString("ENTRIES.STAFF.CHAT_STATE"));
                 entries.add(config.getScoreboard().getString("ENTRIES.STAFF.ONLINE") + config.getScoreboard().getString("COLORS.ONLINE.COLOR") + getOnline());
+            } else {
+            	entries.add("");
+            	if (CooldownManager.getManager().hasCooldown(player, CooldownType.ENDERPEARL))
+            		 entries.add(config.getScoreboard().getString("ENTRIES.ENDER_PEARL") + CooldownManager.getManager().getCooldown(player, CooldownType.ENDERPEARL));
             }
             
-            for (int i = 0; i < entries.size(); i++) {
-				scoreboard.setSlot(i, entries.get(i));
-			}
+            scoreboard.setSlotsFromList(entries);
+            
+            
         } else { // Server Has been reloaded
         	new BukkitRunnable() {
 				@Override

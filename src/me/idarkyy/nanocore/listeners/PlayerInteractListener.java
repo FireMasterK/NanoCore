@@ -3,6 +3,8 @@ package me.idarkyy.nanocore.listeners;
 import me.idarkyy.nanocore.constructors.ActionPlayer;
 import me.idarkyy.nanocore.managers.ConfigurationManager;
 import me.idarkyy.nanocore.managers.CooldownManager;
+
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -24,14 +26,19 @@ public class PlayerInteractListener implements Listener {
          * Enderpearl Cooldown
          */
 
-        if(action.equals(Action.RIGHT_CLICK_BLOCK) || action.equals(Action.RIGHT_CLICK_AIR)) {
-            if(cooldownManager.hasCooldown(player, CooldownManager.CooldownType.ENDERPEARL)) {
-                event.setCancelled(true);
-                ap.sendMessage(config.getMessages().getString("ENDERPEARL_COOLDOWN.CANCEL_MESSAGE")
-                        .replace("%time%", cooldownManager.getCooldown(player, CooldownManager.CooldownType.ENDERPEARL)));
-            } else {
-                cooldownManager.putCooldown(player, CooldownManager.CooldownType.ENDERPEARL, System.currentTimeMillis());
-            }
+        if (action == Action.LEFT_CLICK_AIR
+                || event.getAction() == Action.LEFT_CLICK_BLOCK
+                || event.getItem() == null
+                || event.getItem().getType() != Material.ENDER_PEARL) {
+            return;
+        }
+        
+        if(cooldownManager.hasCooldown(player, CooldownManager.CooldownType.ENDERPEARL)) {
+            event.setCancelled(true);
+            ap.sendMessage(config.getMessages().getString("ENDERPEARL_COOLDOWN.CANCEL_MESSAGE")
+                    .replace("%time%", cooldownManager.getCooldown(player, CooldownManager.CooldownType.ENDERPEARL)));
+        } else {
+            cooldownManager.putCooldown(player, CooldownManager.CooldownType.ENDERPEARL, System.currentTimeMillis());
         }
     }
 }
